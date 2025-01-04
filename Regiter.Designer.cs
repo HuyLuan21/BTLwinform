@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cbbrole = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -39,6 +37,8 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.txbUsername = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.Createbtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -50,38 +50,12 @@
             this.groupBox1.Controls.Add(this.panel4);
             this.groupBox1.Controls.Add(this.panel5);
             this.groupBox1.Controls.Add(this.panel6);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.Createbtn);
             this.groupBox1.Location = new System.Drawing.Point(11, 258);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(481, 436);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(183)))), ((int)(((byte)(42)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(160, 304);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 45);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Create new account";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(165, 143);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 75);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Welcome";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel4
             // 
@@ -151,6 +125,32 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "UserName ";
             // 
+            // Createbtn
+            // 
+            this.Createbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(183)))), ((int)(((byte)(42)))));
+            this.Createbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Createbtn.ForeColor = System.Drawing.Color.White;
+            this.Createbtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.Createbtn.Location = new System.Drawing.Point(160, 304);
+            this.Createbtn.Name = "Createbtn";
+            this.Createbtn.Size = new System.Drawing.Size(178, 45);
+            this.Createbtn.TabIndex = 2;
+            this.Createbtn.Text = "Create new account";
+            this.Createbtn.UseVisualStyleBackColor = false;
+            this.Createbtn.Click += new System.EventHandler(this.Createbtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(165, 143);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(166, 75);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Welcome";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Regiter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -178,7 +178,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Createbtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox cbbrole;

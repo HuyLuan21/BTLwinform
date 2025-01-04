@@ -93,8 +93,14 @@ namespace Phone_Store
 
         private void Loginbtnn_Click(object sender, EventArgs e)
         {
-            if(data.checklogin(txbUser.Text, tbxPass.Text, cbbRole.Text))
+            UserName us = new UserName();
+            if (data.checklogin(txbUser.Text, tbxPass.Text, cbbRole.Text))
+            {
                 MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                us.Show();
+                this.Hide();
+
+            }
             else
                 MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

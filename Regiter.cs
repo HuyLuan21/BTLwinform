@@ -16,25 +16,10 @@ namespace Phone_Store
         {
             InitializeComponent();
         }
+        Data data = new Data();
+        
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Data Data = new Data();
-            if (Data.checkuser(txbUsername.Text))
-            {
-                MessageBox.Show("Tai khoan nay da ton tai", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                Data.adduser(txbUsername.Text, txbPass.Text,cbbrole.ToString());
-                MessageBox.Show("Dang ky thanh cong", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void txbUsername_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
+    
 
         private void Regiter_Load(object sender, EventArgs e)
         {
@@ -42,6 +27,18 @@ namespace Phone_Store
             cbbrole.Items.Add("Nhân viên");
             cbbrole.Items.Add("Admin");
             cbbrole.SelectedIndex = 0;
+        }
+
+        private void Createbtn_Click(object sender, EventArgs e)
+        {
+            if (data.checkuser(txbUsername.Text))
+            {
+                MessageBox.Show("Tai khoan nay da ton tai", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                data.adduser(txbUsername.Text, txbPass.Text, cbbrole.SelectedItem.ToString());
+            }
         }
     }
 }
