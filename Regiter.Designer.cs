@@ -39,6 +39,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Createbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.checkboxShow = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -47,13 +50,16 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkboxShow);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.panel4);
             this.groupBox1.Controls.Add(this.panel5);
             this.groupBox1.Controls.Add(this.panel6);
             this.groupBox1.Controls.Add(this.Createbtn);
             this.groupBox1.Location = new System.Drawing.Point(11, 258);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(481, 436);
+            this.groupBox1.Size = new System.Drawing.Size(481, 517);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -67,10 +73,11 @@
             // 
             // cbbrole
             // 
+            this.cbbrole.Font = new System.Drawing.Font("Tahoma", 12F);
             this.cbbrole.FormattingEnabled = true;
             this.cbbrole.Location = new System.Drawing.Point(88, 25);
             this.cbbrole.Name = "cbbrole";
-            this.cbbrole.Size = new System.Drawing.Size(302, 29);
+            this.cbbrole.Size = new System.Drawing.Size(302, 32);
             this.cbbrole.TabIndex = 3;
             // 
             // panel5
@@ -84,6 +91,7 @@
             // 
             // txbPass
             // 
+            this.txbPass.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txbPass.Location = new System.Drawing.Point(88, 35);
             this.txbPass.Multiline = true;
             this.txbPass.Name = "txbPass";
@@ -110,6 +118,8 @@
             // 
             // txbUsername
             // 
+            this.txbUsername.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.txbUsername.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txbUsername.Location = new System.Drawing.Point(88, 35);
             this.txbUsername.Multiline = true;
             this.txbUsername.Name = "txbUsername";
@@ -129,11 +139,12 @@
             // 
             this.Createbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(183)))), ((int)(((byte)(42)))));
             this.Createbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Createbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Createbtn.ForeColor = System.Drawing.Color.White;
             this.Createbtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Createbtn.Location = new System.Drawing.Point(160, 304);
+            this.Createbtn.Location = new System.Drawing.Point(151, 300);
             this.Createbtn.Name = "Createbtn";
-            this.Createbtn.Size = new System.Drawing.Size(178, 45);
+            this.Createbtn.Size = new System.Drawing.Size(187, 45);
             this.Createbtn.TabIndex = 2;
             this.Createbtn.Text = "Create new account";
             this.Createbtn.UseVisualStyleBackColor = false;
@@ -151,6 +162,39 @@
             this.label1.Text = "Welcome";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(106, 348);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(290, 47);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Already have an Account?";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.label3.Location = new System.Drawing.Point(169, 395);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(160, 61);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Back to LOGIN";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // checkboxShow
+            // 
+            this.checkboxShow.AutoSize = true;
+            this.checkboxShow.Location = new System.Drawing.Point(318, 265);
+            this.checkboxShow.Name = "checkboxShow";
+            this.checkboxShow.Size = new System.Drawing.Size(157, 27);
+            this.checkboxShow.TabIndex = 1;
+            this.checkboxShow.Text = "Show password";
+            this.checkboxShow.UseVisualStyleBackColor = true;
+            this.checkboxShow.CheckedChanged += new System.EventHandler(this.checkboxShow_CheckedChanged);
+            // 
             // Regiter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -166,6 +210,7 @@
             this.Text = "Regiter";
             this.Load += new System.EventHandler(this.Regiter_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -188,5 +233,8 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox txbUsername;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox checkboxShow;
     }
 }

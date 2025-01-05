@@ -85,12 +85,6 @@
     <Compile Include="Regiter.Designer.cs">
       <DependentUpon>Regiter.cs</DependentUpon>
     </Compile>
-    <Compile Include="ResetPass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ResetPass.Designer.cs">
-      <DependentUpon>ResetPass.cs</DependentUpon>
-    </Compile>
     <Compile Include="ThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,9 +118,6 @@
     </Compile>
     <EmbeddedResource Include="Regiter.resx">
       <DependentUpon>Regiter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResetPass.resx">
-      <DependentUpon>ResetPass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserName.resx">
       <DependentUpon>UserName.cs</DependentUpon>

@@ -92,6 +92,9 @@ namespace Phone_Store
         {
             pnel(btnDangXuat);
             this.Close();
+            Login lg = new Login();
+            lg.Show();
+            Close();
         }
 
         public void leave(Button btn)
@@ -129,18 +132,23 @@ namespace Phone_Store
             leave(btnDangXuat);
         }
 
-        private void btnExits_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Bạn có muốn thoát không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn thực sự muốn thoát?", "Xác nhận",
+                     MessageBoxButtons.YesNo,
+                     MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit(); // Đóng toàn bộ ứng dụng
+            }
+
         }
     }
 }

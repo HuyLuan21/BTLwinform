@@ -50,7 +50,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.Createbtn = new System.Windows.Forms.Button();
             this.Loginbtnn = new System.Windows.Forms.Button();
-            this.inkForgot = new System.Windows.Forms.LinkLabel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.Caplocks = new System.Windows.Forms.PictureBox();
             this.Showpassword = new System.Windows.Forms.PictureBox();
@@ -227,7 +226,6 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.Createbtn);
             this.groupBox2.Controls.Add(this.Loginbtnn);
-            this.groupBox2.Controls.Add(this.inkForgot);
             this.groupBox2.Controls.Add(this.panel5);
             this.groupBox2.Controls.Add(this.panel6);
             this.groupBox2.Location = new System.Drawing.Point(12, 190);
@@ -246,10 +244,11 @@
             // 
             // cbbRole
             // 
+            this.cbbRole.Font = new System.Drawing.Font("Tahoma", 12F);
             this.cbbRole.FormattingEnabled = true;
             this.cbbRole.Location = new System.Drawing.Point(88, 26);
             this.cbbRole.Name = "cbbRole";
-            this.cbbRole.Size = new System.Drawing.Size(306, 29);
+            this.cbbRole.Size = new System.Drawing.Size(306, 32);
             this.cbbRole.TabIndex = 5;
             // 
             // label7
@@ -267,6 +266,7 @@
             // 
             this.Createbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(183)))), ((int)(((byte)(42)))));
             this.Createbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Createbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Createbtn.ForeColor = System.Drawing.Color.White;
             this.Createbtn.Location = new System.Drawing.Point(155, 470);
             this.Createbtn.Name = "Createbtn";
@@ -280,6 +280,7 @@
             // 
             this.Loginbtnn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(172)))), ((int)(((byte)(230)))));
             this.Loginbtnn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Loginbtnn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Loginbtnn.ForeColor = System.Drawing.Color.White;
             this.Loginbtnn.Location = new System.Drawing.Point(98, 335);
             this.Loginbtnn.Name = "Loginbtnn";
@@ -288,17 +289,6 @@
             this.Loginbtnn.Text = "LOGIN";
             this.Loginbtnn.UseVisualStyleBackColor = false;
             this.Loginbtnn.Click += new System.EventHandler(this.Loginbtnn_Click);
-            // 
-            // inkForgot
-            // 
-            this.inkForgot.AutoSize = true;
-            this.inkForgot.Location = new System.Drawing.Point(94, 281);
-            this.inkForgot.Name = "inkForgot";
-            this.inkForgot.Size = new System.Drawing.Size(178, 23);
-            this.inkForgot.TabIndex = 2;
-            this.inkForgot.TabStop = true;
-            this.inkForgot.Text = "Forgotten password?";
-            this.inkForgot.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.inkForgot_LinkClicked);
             // 
             // panel5
             // 
@@ -336,7 +326,7 @@
             // 
             // tbxPass
             // 
-            this.tbxPass.Font = new System.Drawing.Font("Times New Roman", 13.875F);
+            this.tbxPass.Font = new System.Drawing.Font("Tahoma", 12F);
             this.tbxPass.Location = new System.Drawing.Point(88, 35);
             this.tbxPass.Multiline = true;
             this.tbxPass.Name = "tbxPass";
@@ -366,7 +356,7 @@
             // 
             // txbUser
             // 
-            this.txbUser.Font = new System.Drawing.Font("Times New Roman", 13.875F);
+            this.txbUser.Font = new System.Drawing.Font("Tahoma", 12F);
             this.txbUser.Location = new System.Drawing.Point(88, 35);
             this.txbUser.Multiline = true;
             this.txbUser.Name = "txbUser";
@@ -396,7 +386,6 @@
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "7";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.Load += new System.EventHandler(this.Login_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_KeyDown);
@@ -442,7 +431,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button Createbtn;
         private System.Windows.Forms.Button Loginbtnn;
-        private System.Windows.Forms.LinkLabel inkForgot;
         private System.Windows.Forms.TextBox tbxPass;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txbUser;

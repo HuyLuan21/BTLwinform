@@ -12,8 +12,8 @@ namespace Phone_Store
         public Login()
         {
             InitializeComponent();
-            this.KeyPreview = true;
-            this.KeyDown += Login_KeyDown;
+            KeyPreview = true;
+    
 
         }
         private Point origiCapsPos;
@@ -42,7 +42,7 @@ namespace Phone_Store
                 cbbRole.SelectedIndex = 1;
             }
 
-            toolTip1.SetToolTip(Showpassword, "Hiện mật khẩu");
+            toolTip1.SetToolTip(Showpassword, "Hiện/Ẩn mật khẩu");
             toolTip1.SetToolTip(Caplocks, "Caps Lock đang bật");
             tbxPass.PasswordChar = '\0';    // Mặc định hiển thị password
 
@@ -74,15 +74,9 @@ namespace Phone_Store
                 Showpassword.Visible = false;
                 Caplocks.Location = Showpassword.Location;
             }
-         
+
         }
 
-        private void inkForgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            ResetPass rs = new ResetPass();
-            rs.Show();
-            this.Hide();
-        }
 
         private void Createbtn_Click(object sender, EventArgs e)
         {
@@ -102,9 +96,20 @@ namespace Phone_Store
 
             }
             else
-                MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
+            {
 
+                MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                tbxPass.KeyDown += ClearPasswordOnBackspace;
+            }
+        }
+        private void ClearPasswordOnBackspace(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Back)
+            {
+                tbxPass.Text = string.Empty;
+                tbxPass.KeyDown -= ClearPasswordOnBackspace; // Gỡ bỏ event handler sau khi đã xử lý
+            }
+        }
 
         private void tbxPass_KeyDown(object sender, KeyEventArgs e)
         {
@@ -147,16 +152,21 @@ namespace Phone_Store
             if (e.CloseReason == CloseReason.UserClosing)
             {
                 // Hiển thị hộp thoại xác nhận
-                DialogResult result = MessageBox.Show("Bạn thực sự muốn thoát?","Xác nhận",
+                DialogResult result = MessageBox.Show("Bạn thực sự muốn thoát?", "Xác nhận",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question);
                 // Nếu người dùng chọn "No", hủy việc đóng form
                 if (result == DialogResult.No)
                 {
-                    e.Cancel = true;
+                    e.Cancel = true; // Hủy sự kiện đóng form
+                }
+                else
+                {
+                    Application.Exit(); // Đóng toàn bộ ứng dụng
                 }
             }
         }
+        
     }
 
 }

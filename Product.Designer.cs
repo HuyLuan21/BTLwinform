@@ -60,7 +60,7 @@
             this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(30, 90);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(165, 30);
             this.comboBox1.TabIndex = 0;
@@ -69,7 +69,7 @@
             // btnReset
             // 
             this.btnReset.Location = new System.Drawing.Point(216, 87);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(47, 35);
             this.btnReset.TabIndex = 1;
@@ -80,7 +80,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(139, 258);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(91, 32);
             this.btnAdd.TabIndex = 2;
@@ -91,7 +91,7 @@
             // btnUpDate
             // 
             this.btnUpDate.Location = new System.Drawing.Point(343, 258);
-            this.btnUpDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpDate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpDate.Name = "btnUpDate";
             this.btnUpDate.Size = new System.Drawing.Size(91, 32);
             this.btnUpDate.TabIndex = 2;
@@ -101,7 +101,7 @@
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(589, 258);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(91, 32);
             this.btnDelete.TabIndex = 2;
@@ -124,7 +124,7 @@
             // 
             this.txtTenSanPham.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenSanPham.Location = new System.Drawing.Point(161, 157);
-            this.txtTenSanPham.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenSanPham.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenSanPham.Name = "txtTenSanPham";
             this.txtTenSanPham.Size = new System.Drawing.Size(190, 30);
             this.txtTenSanPham.TabIndex = 4;
@@ -200,7 +200,7 @@
             // 
             this.txtSoLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuong.Location = new System.Drawing.Point(677, 153);
-            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(190, 30);
             this.txtSoLuong.TabIndex = 4;
@@ -209,7 +209,7 @@
             // 
             this.txtGiaNhap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaNhap.Location = new System.Drawing.Point(532, 215);
-            this.txtGiaNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGiaNhap.Margin = new System.Windows.Forms.Padding(2);
             this.txtGiaNhap.Name = "txtGiaNhap";
             this.txtGiaNhap.Size = new System.Drawing.Size(105, 30);
             this.txtGiaNhap.TabIndex = 4;
@@ -218,22 +218,21 @@
             // 
             this.dgSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgSanPham.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgSanPham.Location = new System.Drawing.Point(0, 315);
-            this.dgSanPham.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgSanPham.Location = new System.Drawing.Point(0, 311);
+            this.dgSanPham.Margin = new System.Windows.Forms.Padding(2);
             this.dgSanPham.Name = "dgSanPham";
             this.dgSanPham.RowHeadersWidth = 92;
             this.dgSanPham.RowTemplate.Height = 37;
-            this.dgSanPham.Size = new System.Drawing.Size(880, 203);
+            this.dgSanPham.Size = new System.Drawing.Size(880, 207);
             this.dgSanPham.TabIndex = 5;
             this.dgSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSanPham_CellClick);
-            this.dgSanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSanPham_CellContentClick);
             // 
             // cboBoNho
             // 
             this.cboBoNho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBoNho.FormattingEnabled = true;
             this.cboBoNho.Location = new System.Drawing.Point(110, 215);
-            this.cboBoNho.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboBoNho.Margin = new System.Windows.Forms.Padding(2);
             this.cboBoNho.Name = "cboBoNho";
             this.cboBoNho.Size = new System.Drawing.Size(108, 30);
             this.cboBoNho.TabIndex = 0;
@@ -243,7 +242,7 @@
             this.cboRam.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboRam.FormattingEnabled = true;
             this.cboRam.Location = new System.Drawing.Point(307, 215);
-            this.cboRam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboRam.Margin = new System.Windows.Forms.Padding(2);
             this.cboRam.Name = "cboRam";
             this.cboRam.Size = new System.Drawing.Size(108, 30);
             this.cboRam.TabIndex = 0;
@@ -252,7 +251,7 @@
             // 
             this.txtGiaBan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaBan.Location = new System.Drawing.Point(739, 215);
-            this.txtGiaBan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGiaBan.Margin = new System.Windows.Forms.Padding(2);
             this.txtGiaBan.Name = "txtGiaBan";
             this.txtGiaBan.Size = new System.Drawing.Size(105, 30);
             this.txtGiaBan.TabIndex = 4;
@@ -262,7 +261,7 @@
             this.cboTinhTrang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTinhTrang.FormattingEnabled = true;
             this.cboTinhTrang.Location = new System.Drawing.Point(474, 155);
-            this.cboTinhTrang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboTinhTrang.Margin = new System.Windows.Forms.Padding(2);
             this.cboTinhTrang.Name = "cboTinhTrang";
             this.cboTinhTrang.Size = new System.Drawing.Size(108, 30);
             this.cboTinhTrang.TabIndex = 0;
@@ -310,7 +309,7 @@
             this.Controls.Add(this.cboBoNho);
             this.Controls.Add(this.comboBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Product";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produst";

@@ -28,6 +28,25 @@ namespace Phone_Store
                 }
             }
         }
+        public void LoadUser(List<string> user)
+        {
+            using (SqlConnection connection = new SqlConnection(conn))
+            {
+                string query = "SELECT tendangnhap FROM taikhoan";  // Thay đổi câu query
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            user.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+        }
+      
         public bool checkuser(string username)
         {
             using (SqlConnection connection = new SqlConnection(conn))

@@ -20,7 +20,7 @@ namespace Phone_Store
 
         private void LoadDataGirdView()
         {
-            string query = "Select * from v_khachhang";
+            string query = "Select * from khachhang";
             data.Select(query, dgKhachHang);
         }
         private void Customer_Load(object sender, EventArgs e)

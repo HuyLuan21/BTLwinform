@@ -65,7 +65,7 @@
             // 
             this.txtSearch.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(54, 93);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(223, 30);
             this.txtSearch.TabIndex = 1;
@@ -73,7 +73,7 @@
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(306, 92);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(43, 32);
             this.btnSearch.TabIndex = 2;
@@ -84,7 +84,7 @@
             // 
             this.txtSDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(233, 202);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(2);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(244, 30);
             this.txtSDT.TabIndex = 1;
@@ -93,7 +93,7 @@
             // 
             this.txtTenKH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenKH.Location = new System.Drawing.Point(233, 148);
-            this.txtTenKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenKH.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Size = new System.Drawing.Size(244, 30);
             this.txtTenKH.TabIndex = 1;
@@ -102,7 +102,7 @@
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.Location = new System.Drawing.Point(622, 202);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(265, 30);
             this.txtDiaChi.TabIndex = 1;
@@ -156,7 +156,7 @@
             this.cboGioiTinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGioiTinh.FormattingEnabled = true;
             this.cboGioiTinh.Location = new System.Drawing.Point(622, 148);
-            this.cboGioiTinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboGioiTinh.Margin = new System.Windows.Forms.Padding(2);
             this.cboGioiTinh.Name = "cboGioiTinh";
             this.cboGioiTinh.Size = new System.Drawing.Size(265, 30);
             this.cboGioiTinh.TabIndex = 4;
@@ -165,7 +165,7 @@
             // 
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(124, 255);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(106, 34);
             this.btnAdd.TabIndex = 5;
@@ -177,7 +177,7 @@
             // 
             this.btnUpDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpDate.Location = new System.Drawing.Point(339, 256);
-            this.btnUpDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpDate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpDate.Name = "btnUpDate";
             this.btnUpDate.Size = new System.Drawing.Size(135, 34);
             this.btnUpDate.TabIndex = 5;
@@ -188,7 +188,7 @@
             // 
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(622, 255);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(106, 34);
             this.btnDelete.TabIndex = 5;
@@ -198,7 +198,7 @@
             // btnQuayLai
             // 
             this.btnQuayLai.Location = new System.Drawing.Point(390, 92);
-            this.btnQuayLai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQuayLai.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(43, 32);
             this.btnQuayLai.TabIndex = 2;
@@ -208,9 +208,10 @@
             // 
             // dgKhachHang
             // 
+            this.dgKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgKhachHang.Location = new System.Drawing.Point(35, 307);
-            this.dgKhachHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.dgKhachHang.Name = "dgKhachHang";
             this.dgKhachHang.RowHeadersWidth = 92;
             this.dgKhachHang.RowTemplate.Height = 37;
@@ -239,9 +240,8 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Customer";
-            this.Text = "Khách Hàng";
             this.Load += new System.EventHandler(this.Customer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgKhachHang)).EndInit();
             this.ResumeLayout(false);

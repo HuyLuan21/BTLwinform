@@ -135,11 +135,6 @@ namespace Phone_Store
             MessageBox.Show("Sửa sản phẩm thành công");
         }
 
-        private void dgSanPham_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dgSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             row = e.RowIndex;
