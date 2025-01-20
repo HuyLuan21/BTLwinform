@@ -78,5 +78,10 @@ namespace Phone_Store
                 txbPass.PasswordChar = '*';
             }
         }
+
+        private void MiniumBtn_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }

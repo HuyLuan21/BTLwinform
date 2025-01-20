@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkboxShow = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cbbrole = new System.Windows.Forms.ComboBox();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -39,9 +42,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Createbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.checkboxShow = new System.Windows.Forms.CheckBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.MiniumBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -62,6 +64,39 @@
             this.groupBox1.Size = new System.Drawing.Size(481, 517);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            // 
+            // checkboxShow
+            // 
+            this.checkboxShow.AutoSize = true;
+            this.checkboxShow.Location = new System.Drawing.Point(318, 265);
+            this.checkboxShow.Name = "checkboxShow";
+            this.checkboxShow.Size = new System.Drawing.Size(157, 27);
+            this.checkboxShow.TabIndex = 1;
+            this.checkboxShow.Text = "Show password";
+            this.checkboxShow.UseVisualStyleBackColor = true;
+            this.checkboxShow.CheckedChanged += new System.EventHandler(this.checkboxShow_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
+            this.label3.Location = new System.Drawing.Point(169, 395);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(160, 61);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Back to LOGIN";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(106, 348);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(290, 47);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Already have an Account?";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel4
             // 
@@ -162,48 +197,36 @@
             this.label1.Text = "Welcome";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // btnExit
             // 
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(106, 348);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(290, 47);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Already have an Account?";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnExit.Image = global::Phone_Store.Properties.Resources._1828843;
+            this.btnExit.Location = new System.Drawing.Point(455, 19);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(32, 32);
+            this.btnExit.TabIndex = 101;
+            this.btnExit.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // MiniumBtn
             // 
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.label3.Location = new System.Drawing.Point(169, 395);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 61);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Back to LOGIN";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // checkboxShow
-            // 
-            this.checkboxShow.AutoSize = true;
-            this.checkboxShow.Location = new System.Drawing.Point(318, 265);
-            this.checkboxShow.Name = "checkboxShow";
-            this.checkboxShow.Size = new System.Drawing.Size(157, 27);
-            this.checkboxShow.TabIndex = 1;
-            this.checkboxShow.Text = "Show password";
-            this.checkboxShow.UseVisualStyleBackColor = true;
-            this.checkboxShow.CheckedChanged += new System.EventHandler(this.checkboxShow_CheckedChanged);
+            this.MiniumBtn.Image = global::Phone_Store.Properties.Resources.exit;
+            this.MiniumBtn.Location = new System.Drawing.Point(417, 19);
+            this.MiniumBtn.Name = "MiniumBtn";
+            this.MiniumBtn.Size = new System.Drawing.Size(32, 32);
+            this.MiniumBtn.TabIndex = 102;
+            this.MiniumBtn.UseVisualStyleBackColor = true;
+            this.MiniumBtn.Click += new System.EventHandler(this.MiniumBtn_Click);
             // 
             // Regiter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 836);
+            this.Controls.Add(this.MiniumBtn);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Regiter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -236,5 +259,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox checkboxShow;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button MiniumBtn;
     }
 }

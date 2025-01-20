@@ -48,7 +48,7 @@ namespace Phone_Store
             form.TopLevel = false;
             form.TopMost = true;
             form.FormBorderStyle = FormBorderStyle.None;
-            this.plLoadForm.Controls.Add(form);
+            plLoadForm.Controls.Add(form);
             form.Show();
         }
 
@@ -134,10 +134,7 @@ namespace Phone_Store
 
         
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
+      
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -149,6 +146,24 @@ namespace Phone_Store
                 Application.Exit(); // Đóng toàn bộ ứng dụng
             }
 
+        }
+
+        private void MiniumBtn_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void UserName_Load(object sender, EventArgs e)
+        {
+            if (Login.role == "Nhân viên")  btnNhanVien.Enabled = false;
+            lblUserName.Text = Login.username;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            report report = new report();
+            this.Close();
+            report.Show();
         }
     }
 }

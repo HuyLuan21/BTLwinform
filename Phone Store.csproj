@@ -33,8 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Guna.Charts.WinForms, Version=1.1.0.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.Charts.WinForms.1.1.0\lib\net472\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +62,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CR_bill.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_bill.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrmAddBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddBill.Designer.cs">
+      <DependentUpon>FrmAddBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +92,24 @@
     </Compile>
     <Compile Include="Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChonKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChonKH.Designer.cs">
+      <DependentUpon>FrmChonKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChonSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChonSP.Designer.cs">
+      <DependentUpon>FrmChonSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHoaDonBanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHoaDonBanHang.Designer.cs">
+      <DependentUpon>FrmHoaDonBanHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -85,6 +131,12 @@
     <Compile Include="Regiter.Designer.cs">
       <DependentUpon>Regiter.cs</DependentUpon>
     </Compile>
+    <Compile Include="report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="report.Designer.cs">
+      <DependentUpon>report.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,8 +149,30 @@
     <Compile Include="UserName.Designer.cs">
       <DependentUpon>UserName.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Bill.resx">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_bill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_bill.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddBill.resx">
+      <DependentUpon>FrmAddBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChonKH.resx">
+      <DependentUpon>FrmChonKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChonSP.resx">
+      <DependentUpon>FrmChonSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHoaDonBanHang.resx">
+      <DependentUpon>FrmHoaDonBanHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -119,9 +193,17 @@
     <EmbeddedResource Include="Regiter.resx">
       <DependentUpon>Regiter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="report.resx">
+      <DependentUpon>report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe.resx">
+      <DependentUpon>ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserName.resx">
       <DependentUpon>UserName.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -152,6 +234,87 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hoa_don.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thong_ke %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dang_xuat %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1828843.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khach_hang1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhan_vien1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quay_lai.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Them.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpDate %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xoa %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loop %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Them %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UpDate %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Xoa %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Them %281%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search %283%29 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loop %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chi_tiet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\them_hoa_don.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1828843 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

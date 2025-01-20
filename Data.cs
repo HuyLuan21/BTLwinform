@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Runtime.Remoting.Contexts;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace Phone_Store
@@ -161,7 +163,7 @@ namespace Phone_Store
         }
         public void Select(string query, DataGridView dg)
         {
-            using (SqlConnection con = new SqlConnection(conn))
+            using(SqlConnection con = new SqlConnection(conn))
             {
                 con.Open();
                 SqlDataAdapter adapter = new SqlDataAdapter();
@@ -198,6 +200,55 @@ namespace Phone_Store
                 cmd.ExecuteNonQuery();
             }
         }
+        public int GetData(string query)
+        {
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                con.Open();
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    int tong = (int)cmd.ExecuteScalar();
+                    return tong;
+                }
+            }
+        }
 
+        public DataTable GetDataTable(string query)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                con.Open();
+                using (SqlCommand command = new SqlCommand(query, con))
+                {
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataTable);
+                    }
+                }
+            }
+            return dataTable;
+        }
+        public Dictionary<int, float> GetData(string query, string date)
+        {
+            // Tạo một Dictionary để lưu dữ liệu, key là tháng, value là doanh thu
+            Dictionary<int, float> doanhThuData = new Dictionary<int, float>();
+
+            using (SqlConnection con = new SqlConnection(conn))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand(query, con);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int x = Convert.ToInt32(reader[$"{date}"]);
+                    float doanhThu = Convert.ToSingle(reader["doanhThu"]);
+                    doanhThuData[x] = doanhThu;
+                }
+            }
+
+            return doanhThuData;
+        }
     }
 }

@@ -59,6 +59,8 @@
             this.txbUser = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnExit = new System.Windows.Forms.Button();
+            this.MiniumBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -372,21 +374,42 @@
             this.label9.TabIndex = 77;
             this.label9.Text = "UserName ";
             // 
+            // btnExit
+            // 
+            this.btnExit.Image = global::Phone_Store.Properties.Resources._1828843;
+            this.btnExit.Location = new System.Drawing.Point(455, 19);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(32, 32);
+            this.btnExit.TabIndex = 100;
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // MiniumBtn
+            // 
+            this.MiniumBtn.Image = global::Phone_Store.Properties.Resources.exit;
+            this.MiniumBtn.Location = new System.Drawing.Point(417, 19);
+            this.MiniumBtn.Name = "MiniumBtn";
+            this.MiniumBtn.Size = new System.Drawing.Size(32, 32);
+            this.MiniumBtn.TabIndex = 101;
+            this.MiniumBtn.UseVisualStyleBackColor = true;
+            this.MiniumBtn.Click += new System.EventHandler(this.MiniumBtn_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 836);
+            this.Controls.Add(this.MiniumBtn);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.Load += new System.EventHandler(this.Login_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Login_KeyDown);
             this.groupBox1.ResumeLayout(false);
@@ -442,6 +465,8 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox Caplocks;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button MiniumBtn;
     }
 }
 

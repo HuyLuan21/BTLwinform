@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -21,7 +15,7 @@ namespace Phone_Store
 
         private void LoadDataGirdView()
         {
-            string query = "Select * from SanPham";
+            string query = "Select * from v_SanPham";
             data.Select(query, dgSanPham);
         }
         private int row;
@@ -117,8 +111,8 @@ namespace Phone_Store
             LoadDataGirdView();
         }
 
-  
-    private new void Update()
+
+        private new void Update()
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>
             {
@@ -137,14 +131,24 @@ namespace Phone_Store
 
         private void dgSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            row = e.RowIndex;
-            txtTenSanPham.Text = dgSanPham[1, row].Value.ToString();
-            cboBoNho.Text = dgSanPham[2, row].Value.ToString();
-            cboRam.Text = dgSanPham[3, row].Value.ToString();
-            cboTinhTrang.Text = dgSanPham[4, row].Value.ToString();
-            txtSoLuong.Text = dgSanPham[5, row].Value.ToString();
-            txtGiaNhap.Text = dgSanPham[7, row].Value.ToString();
-            txtGiaBan.Text = dgSanPham[8, row].Value.ToString();
+            try
+            {
+                if (e.RowIndex >= 0) //dam bao khi click vao header thi khong xay ra loi
+                {
+                    row = e.RowIndex;
+                    txtTenSanPham.Text = dgSanPham[1, row].Value.ToString();
+                    cboBoNho.Text = dgSanPham[2, row].Value.ToString();
+                    cboRam.Text = dgSanPham[3, row].Value.ToString();
+                    cboTinhTrang.Text = dgSanPham[4, row].Value.ToString();
+                    txtSoLuong.Text = dgSanPham[5, row].Value.ToString();
+                    txtGiaNhap.Text = dgSanPham[7, row].Value.ToString();
+                    txtGiaBan.Text = dgSanPham[8, row].Value.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi hiển thị dữ liệu: " + ex.Message);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -152,9 +156,17 @@ namespace Phone_Store
             DialogResult result = MessageBox.Show("Bạn có thực sự muốn xoá không?", "Xoá sản phẩm", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                string query = $"UPDATE sanpham SET status = 'inactive' WHERE masp = '{dgSanPham[0, row].Value.ToString()}';";
-                data.Delete(query);
-                LoadDataGirdView();
+                try
+                {
+                    string query = $"delete sanpham WHERE masp = '{dgSanPham[0, row].Value.ToString()}'";
+                    data.Delete(query);
+                    LoadDataGirdView();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi xóa: " + ex.Message);
+                }
             }
         }
 
@@ -183,6 +195,17 @@ namespace Phone_Store
                 }
             }
             comboBox1.Text = "Sắp xếp theo";
+        }
+
+        private void Product_Load(object sender, EventArgs e)
+        {
+            LoadDataGirdView();
+        }
+
+        private void btnUpDate_Click(object sender, EventArgs e)
+        {
+            Update();
+            LoadDataGirdView();
         }
     }
 }

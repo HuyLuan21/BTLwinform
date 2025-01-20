@@ -9,6 +9,9 @@ namespace Phone_Store
 
     {
         Data data = new Data();
+   
+        public static string role = role;
+        public static string manv, username;
         public Login()
         {
             InitializeComponent();
@@ -90,6 +93,8 @@ namespace Phone_Store
             UserName us = new UserName();
             if (data.checklogin(txbUser.Text, tbxPass.Text, cbbRole.Text))
             {
+                username = txbUser.Text;
+                role = cbbRole.Text;
                 MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 us.Show();
                 this.Hide();
@@ -147,25 +152,23 @@ namespace Phone_Store
             }
         }
 
-        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        private void MiniumBtn_Click(object sender, EventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing)
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn thực sự muốn thoát?", "Xác nhận",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
-                // Hiển thị hộp thoại xác nhận
-                DialogResult result = MessageBox.Show("Bạn thực sự muốn thoát?", "Xác nhận",
-                    MessageBoxButtons.YesNo,
-                    MessageBoxIcon.Question);
-                // Nếu người dùng chọn "No", hủy việc đóng form
-                if (result == DialogResult.No)
-                {
-                    e.Cancel = true; // Hủy sự kiện đóng form
-                }
-                else
-                {
-                    Application.Exit(); // Đóng toàn bộ ứng dụng
-                }
+                Application.Exit(); // Đóng toàn bộ ứng dụng
+
             }
         }
+
         
     }
 
